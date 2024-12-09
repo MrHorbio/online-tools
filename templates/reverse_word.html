@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin:20px; font-size:50px; text-align: center;">More Powerful tools</h2>
+<div class="options">
+    <a href="#" class="border border-dark p-2 my-5">Dork-generator</a>
+    <a href="#" class="border border-dark p-2 my-2">Number lookup</a>
+    <a href="#" class="border border-dark p-2 my-2">Text replacement</a>
+</div>
+<form method="post" class="d-inline-flex ">
+    <div class="list ">
+        <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">More Tools</h3>
+        <ul class="list-group ml-4 font-weight-bold ">
+            <a href="/reverse-words"><li class="list-group-item border border-dark bg-warning">Reverse Text</li></a>
+            <a href="/text-replacement"><li class="list-group-item border border-dark bg-warning">Text Replacement </li></a>
+            <a href="/word-counter"><li class="list-group-item border border-dark bg-warning">Word Counter</li></a>
+            <a href="/random-word"><li class="list-group-item border border-dark bg-warning">Text Randomizer</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Comparison</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Pallindrome Checker</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Translator</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Emoji Converter</li></a>
+        </ul>
+    </div>
+    <div class="input p-4">
+        <div class="heading">
+            <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Reverse text</h1>
+        </div>
+        <div class="text-box">
+            <div class="lable font-italic font-weight-bold">
+                <label>Input data</label>
+            </div>
+            <textarea rows="10" cols="60" name="input_data" class="border border-dark "></textarea>
+        </div>
+        <div class="row mx-3 my-2 ">
+            <input type="submit"
+                class="border border-dark text-light rounded bg-success p-1 col-4 font-italic font-weight-bold"
+                value="Submit">
+        </div>
+
+    </div>
+
+    <div class="text-box " style="margin-top:80px;margin-right: 20px;">
+        <div class="lable font-italic font-weight-bold ">
+            <label>Output</label>
+        </div>
+        <textarea rows="10" cols="60" name="output" class="border border-dark " readonly>{{ data }}</textarea>
+    </div>
+
+</form>
+<div class="about p-5">
+    <div class="heading border border-success  bg-success text-light p-1 font-weight-bold">
+        <h3 style="font-size:20px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left:20px;">About Reverse
+            words tool</h3>
+    </div>
+    <div class="paragraph border border-success ">
+        <pre class="p-2 font-weight-bold ">
+            Place words in a sentence in reverse order. Here is an example. See me sing. sing me See.
+            
+            This is one strategy of transformation of text that involves transformation for uses such as HTML and
+            plain text that do not support such a transformation. HTML does not allow for such transformation so
+            this utility can provide for a reverse text transformation. The reverse text that appears in the Output
+            area provides a straight forward transformation.
+
+            Possible use could be encoding or for uses with Arabic languages that are left to right. Another
+            possible use is storing passwords in a database in a way that would make the passwords unreadable.
+
+            Other utilities provide for more variations in transformation such as flipping horizontally, inverting
+            characters, turning characters, rotating characters, mirror writing, mirror images, applications for
+            Cyrillic characters, and special typefaces.
+
+            The term “text transformations” includes tools that change the features of text. Some of the examples of
+            this category include spell check, word prediction software, speech recognition software, and other
+            software programs.
+
+        </pre>
+    </div>
+</div>
+
+{% endblock %}

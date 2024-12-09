@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin:20px; font-size:50px; text-align: center;">More Powerful tools</h2>
+<div class="options">
+    <a href="#" class="border border-dark p-2 my-5">Dork-generator</a>
+    <a href="#" class="border border-dark p-2 my-2">Number lookup</a>
+    <a href="#" class="border border-dark p-2 my-2">Text replacement</a>
+</div>
+<form method="post" class="d-inline-flex ">
+    <div class="list ">
+        <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">More Tools</h3>
+        <ul class="list-group ml-4 font-weight-bold ">
+            <a href="/reverse-words"><li class="list-group-item border border-dark bg-warning">Reverse Text</li></a>
+            <a href="/text-replacement"><li class="list-group-item border border-dark bg-warning">Text Replacement </li></a>
+            <a href="/word-counter"><li class="list-group-item border border-dark bg-warning">Word Counter</li></a>
+            <a href="/random-word"><li class="list-group-item border border-dark bg-warning">Text Randomizer</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Comparison</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Pallindrome Checker</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Translator</li></a>
+            <a href="#"><li class="list-group-item border border-dark bg-warning">Text Emoji Converter</li></a>
+        </ul>
+    </div>
+    <div class="input p-4">
+        <div class="heading">
+            <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Randomizer</h1>
+        </div>
+        <div class="text-box">
+            <div class="lable font-italic font-weight-bold">
+                <label>Input data</label>
+            </div>
+            <textarea rows="10" cols="60" name="input_data" class="border border-dark " required></textarea>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Words
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Character
+            </label>
+          </div>
+        <div class="row mx-3 my-2 ">
+            <input type="submit"
+                class="border border-dark text-light rounded bg-success p-1 col-4 m-2 font-italic font-weight-bold"
+                value="Randomize" >
+        </div>
+
+    </div>
+
+    <div class="text-box " style="margin-top:80px;margin-right: 20px;">
+        <div class="lable font-italic font-weight-bold ">
+            <label>Output</label>
+        </div>
+        <textarea rows="10" cols="60" name="output" class="border border-dark " readonly>{{ data }}</textarea>
+    </div>
+
+</form>
+<div class="about p-5">
+    <div class="heading border border-success  bg-success text-light p-1 font-weight-bold">
+        <h3 style="font-size:20px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left:20px;">About Reverse
+            words tool</h3>
+    </div>
+    <div class="paragraph border border-success ">
+        <p class="p-2 ">
+            A word counter online tool is a useful tool designed to help users track the number of words in a given
+            text. This tool is particularly beneficial for writers, students, and professionals who need to adhere to
+            specific word limits for essays, articles, reports, or other written content. Word counters can be found in
+            various forms, including built-in features in word processing software like Microsoft Word and Google Docs,
+            as well as standalone online applications and browser extensions.
+
+            Using a word counter is straightforward. Users can simply paste or type their text into the designated area,
+            and the tool will automatically calculate the total word count. Many word counters also provide additional
+            features, such as character count, sentence count, and paragraph count, offering a more comprehensive
+            analysis of the text. Some advanced tools even include readability scores, keyword density analysis, and
+            other metrics that can help improve writing quality and SEO performance.
+
+            In addition to helping writers meet specific requirements, word counters can also assist in editing and
+            refining content. By keeping track of word count, users can identify areas where they may need to condense
+            their writing or expand on certain points for clarity. This can lead to more concise and effective
+            communication, ultimately enhancing the overall quality of the written work.
+
+            Overall, a word counter is an essential tool for anyone involved in writing, whether for academic,
+            professional, or personal purposes. It not only aids in meeting word count requirements but also contributes
+            to better writing practices by encouraging clarity and precision in communication.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
